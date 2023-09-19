@@ -13,14 +13,13 @@ abstract public class BPNLayer {
     protected final double[] summedInput;
     protected double[] input, output;
     protected final double learningRate;
+
     public int getSize() {
         return nNodes;
     }
 
     public BPNLayer(int previousLayerSize, double learningRate, Scanner sc) {
         this.learningRate = learningRate;
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println(System.in.);
         System.out.print("Enter number of nodes: ");
         this.nNodes = sc.nextInt();
         System.out.print("Enter choice code of the desired activation function: ");
@@ -58,13 +57,6 @@ abstract public class BPNLayer {
     }
 
     public double[] getOutput(double[] input) {
-//        System.out.println();
-//        for(double[] i: weightMatrix) {
-//            for(double j: i) {
-//                System.out.print(j + " ");
-//            }
-//            System.out.println();
-//        }
         this.input = input;
         if (input.length != weightMatrix.length)
             return null;
@@ -76,11 +68,6 @@ abstract public class BPNLayer {
             }
             output[i] = this.activationFunction.transfer(summedInput[i]);
         }
-//        System.out.println("Output:");
-//        for(double i: output) {
-//            System.out.print(i +" ");
-//        }
-//        System.out.println();
         this.output = output;
         return output;
     }
