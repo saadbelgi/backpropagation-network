@@ -5,3 +5,4 @@ exp3.iml
 plotting rmse during training.ipynb
 .ipynb_checkpoints
 out
+*.tmp
