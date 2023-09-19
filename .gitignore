@@ -6,3 +6,4 @@ plotting rmse during training.ipynb
 .ipynb_checkpoints
 out
 *.tmp
+*.txt
